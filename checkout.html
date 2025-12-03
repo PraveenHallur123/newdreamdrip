@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | DreamDrip</title>
+    <link rel="icon" type="image/png" href="/assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">DreamDrip</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="customize.html" class="nav-link">Customize</a>
+                <a href="designs.html" class="nav-link">My Designs</a>
+                <a href="measurements.html" class="nav-link">Measurements</a>
+                <span class="checkout-progress">Step 3 of 3</span>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Checkout Process -->
+    <main class="checkout-container">
+        <div class="checkout-header">
+            <h1><i class="fas fa-shopping-bag"></i> Complete Your Order</h1>
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Design</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step completed">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Measurements</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step active">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Checkout</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="checkout-content">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2><i class="fas fa-clipboard-list"></i> Order Summary</h2>
+                <div class="summary-card">
+                    <div class="summary-design" id="summary-design">
+                        <!-- Design summary will be loaded here -->
+                        <div class="loading-summary">Loading your design...</div>
+                    </div>
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>Custom Dress Creation</span>
+                            <span>$349.99</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Premium Fabric Upgrade</span>
+                            <span>$49.99</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Custom Tailoring</span>
+                            <span>$99.99</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Shipping & Handling</span>
+                            <span>$24.99</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span>$524.96</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-preview-small">
+                    <h3>Your Design Preview</h3>
+                    <div id="checkout-preview">
+                        <!-- Small preview will appear here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Checkout Form -->
+            <div class="checkout-form">
+                <h2><i class="fas fa-user"></i> Contact Information</h2>
+                <form id="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required placeholder="(555) 123-4567">
+                    </div>
+                    
+                    <h3><i class="fas fa-home"></i> Shipping Address</h3>
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" required placeholder="123 Main Street">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" required placeholder="New York">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <input type="text" id="state" required placeholder="NY">
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP Code *</label>
+                            <input type="text" id="zip" required placeholder="10001">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="US" selected>United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                    </div>
+                    
+                    <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                    <div class="form-group">
+                        <label for="card-name">Name on Card *</label>
+                        <input type="text" id="card-name" required placeholder="JANE A DOE">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-number">Card Number *</label>
+                        <input type="text" id="card-number" required placeholder="1234 5678 9012 3456">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date *</label>
+                            <input type="text" id="expiry" required placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV *</label>
+                            <input type="text" id="cvv" required placeholder="123">
+                        </div>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="save-info" checked>
+                        <label for="save-info">Save my information for faster checkout next time</label>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="agree-terms" required>
+                        <label for="agree-terms">I agree to the <a href="#">Terms & Conditions</a> and understand this is a custom order that cannot be returned</label>
+                    </div>
+                    
+                    <div class="checkout-actions">
+                        <button type="button" class="btn-secondary" onclick="window.location.href='customize.html'">
+                            <i class="fas fa-arrow-left"></i> Back to Design
+                        </button>
+                        <button type="submit" class="btn-primary btn-glow">
+                            <i class="fas fa-lock"></i> Complete Purchase
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">DreamDrip</span>
+                <p>Luxury custom fashion for the modern dreamer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="customize.html">Customize</a>
+                <a href="shop.html">Shop Designs</a>
+                <a href="designs.html">My Designs</a>
+                <a href="measurements.html">Measurements</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="returns.html">Returns</a>
+                <a href="size-guide.html">Size Guide</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+  &copy; 2024 DreamDrip. All rights reserved. 
+  | Powered by <a href="https://hallunix.tech" target="_blank">Hallunix Tech Solutions</a>
+</p>
+
+            <p class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Load current design for summary
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+            loadCheckoutSummary();
+            
+            // Handle form submission
+            document.getElementById('checkout-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                processCheckout();
+            });
+        });
+        
+        function loadCheckoutSummary() {
+            // Try to get current design from localStorage
+            const currentDesign = JSON.parse(localStorage.getItem('dreamdrip_current_design') || '{}');
+            const summaryDiv = document.getElementById('summary-design');
+            const previewDiv = document.getElementById('checkout-preview');
+            
+            if (Object.keys(currentDesign).length === 0) {
+                summaryDiv.innerHTML = `
+                    <div class="no-design">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>No design selected. Please <a href="customize.html">create a design</a> first.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Create summary
+            summaryDiv.innerHTML = `
+                <h3>${currentDesign.name || 'Custom Design'}</h3>
+                <ul>
+                    <li><strong>Color:</strong> <span class="color-chip" style="background-color: ${currentDesign.color || '#D4A373'}"></span> ${currentDesign.color || '#D4A373'}</li>
+                    <li><strong>Pattern:</strong> ${currentDesign.pattern || 'None'}</li>
+                    <li><strong>Sleeves:</strong> ${currentDesign.sleeves || 'Sleeveless'}</li>
+                    <li><strong>Length:</strong> ${currentDesign.length || 'Midi'}</li>
+                    <li><strong>Belt:</strong> ${currentDesign.belt || 'Gold'}</li>
+                </ul>
+            `;
+            
+            // Create small preview
+            previewDiv.innerHTML = `
+                <svg width="150" height="200" viewBox="0 0 300 500">
+                    <defs>
+                        <pattern id="checkout-pattern" patternUnits="userSpaceOnUse" width="20" height="20">
+                            ${currentDesign.pattern === 'floral' ? '<path d="M5,5 Q7.5,2.5 10,5 T15,5" fill="${currentDesign.color}" opacity="0.6"/>' : ''}
+                            ${currentDesign.pattern === 'dots' ? '<circle cx="10" cy="10" r="2" fill="${currentDesign.color}" opacity="0.6"/>' : ''}
+                            ${currentDesign.pattern === 'stripe' ? '<rect x="0" y="0" width="5" height="20" fill="${currentDesign.color}" opacity="0.6"/>' : ''}
+                            ${currentDesign.pattern === 'gold' ? '<circle cx="10" cy="10" r="3" fill="#FFD700" opacity="0.8"/>' : ''}
+                        </pattern>
+                    </defs>
+                    <path d="M150,100 C100,150 100,300 120,400 L180,400 C200,300 200,150 150,100 Z" 
+                          fill="${currentDesign.color || '#D4A373'}" stroke="#FFF7F0" stroke-width="1"/>
+                    ${currentDesign.pattern !== 'none' ? 
+                      `<path d="M150,100 C100,150 100,300 120,400 L180,400 C200,300 200,150 150,100 Z" 
+                            fill="url(#checkout-pattern)" stroke="none"/>` : ''}
+                    <rect x="${currentDesign.belt === 'embroidered' ? '125' : '130'}" y="250" 
+                          width="${currentDesign.belt === 'embroidered' ? '50' : '40'}" height="10" rx="3" 
+                          fill="${currentDesign.belt === 'gold' ? '#D4A373' : currentDesign.belt === 'platinum' ? '#E5E4E2' : '#8B5A2B'}" 
+                          stroke="#FFF7F0" stroke-width="1"/>
+                </svg>
+            `;
+        }
+        
+        function processCheckout() {
+            // Basic form validation
+            const requiredFields = ['full-name', 'email', 'phone', 'address', 'city', 'state', 'zip', 'country', 'card-name', 'card-number', 'expiry', 'cvv'];
+            let isValid = true;
+            
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (!document.getElementById('agree-terms').checked) {
+                alert('Please agree to the Terms & Conditions.');
+                return;
+            }
+            
+            if (!isValid) {
+                alert('Please fill in all required fields marked with *.');
+                return;
+            }
+            
+            // In a real app, this would process payment
+            // For demo, just save order and redirect
+            const orderData = {
+                customer: {
+                    name: document.getElementById('full-name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    address: {
+                        street: document.getElementById('address').value,
+                        city: document.getElementById('city').value,
+                        state: document.getElementById('state').value,
+                        zip: document.getElementById('zip').value,
+                        country: document.getElementById('country').value
+                    }
+                },
+                design: JSON.parse(localStorage.getItem('dreamdrip_current_design') || '{}'),
+                measurements: JSON.parse(localStorage.getItem('dreamdrip_measurements') || '{}'),
+                date: new Date().toISOString(),
+                total: 524.96,
+                orderId: 'DD' + Date.now() + Math.floor(Math.random() * 1000)
+            };
+            
+            // Save order to localStorage
+            localStorage.setItem('dreamdrip_last_order', JSON.stringify(orderData));
+            
+            // Redirect to success page
+            window.location.href = 'success.html';
+        }
+    </script>
+</body>
+</html>

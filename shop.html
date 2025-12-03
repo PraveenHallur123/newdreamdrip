@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Designs | DreamDrip</title>
+    <link rel="icon" type="image/png" href="/assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">DreamDrip</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="customize.html" class="nav-link">Customize</a>
+                <a href="designs.html" class="nav-link">My Designs</a>
+                <a href="shop.html" class="nav-link active">Shop Designs</a>
+                <a href="measurements.html" class="nav-link">Measurements</a>
+                <div class="user-section">
+                    <div data-netlify-identity-menu></div>
+                </div>
+                <button class="btn-cta" onclick="window.location.href='customize.html'">
+                    <i class="fas fa-plus"></i> Create
+                </button>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <div class="shop-header">
+        <div class="shop-header-content">
+            <h1>Shop DreamDrip Designs</h1>
+            <p>Browse our collection of pre-designed dresses. Customize any design or buy as-is.</p>
+        </div>
+    </div>
+
+    <!-- Shop Filters -->
+    <div class="shop-filters">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="all">All Designs</option>
+                    <option value="evening">Evening Gowns</option>
+                    <option value="cocktail">Cocktail Dresses</option>
+                    <option value="bridal">Bridal</option>
+                    <option value="day">Day Dresses</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Price Range</label>
+                <select id="price">
+                    <option value="all">All Prices</option>
+                    <option value="low">Under $300</option>
+                    <option value="medium">$300 - $500</option>
+                    <option value="high">Over $500</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="color">Color</label>
+                <select id="color">
+                    <option value="all">All Colors</option>
+                    <option value="dark">Dark Tones</option>
+                    <option value="light">Light Tones</option>
+                    <option value="gold">Rose Gold</option>
+                    <option value="purple">Purple</option>
+                </select>
+            </div>
+            <button class="btn-secondary" onclick="resetFilters()">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+        </div>
+    </div>
+
+    <!-- Shop Grid -->
+    <main class="shop-container">
+        <div class="shop-grid" id="shop-grid">
+            <!-- Design cards will be loaded dynamically -->
+        </div>
+        
+        <div class="shop-empty" id="shop-empty" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No designs found</h3>
+            <p>Try adjusting your filters or browse all designs</p>
+            <button class="btn-primary" onclick="resetFilters()">
+                Show All Designs
+            </button>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="section newsletter">
+        <div class="newsletter-container">
+            <h2>New Designs Every Week</h2>
+            <p>Subscribe to be the first to see our latest creations</p>
+            <form name="shop-newsletter" method="POST" data-netlify="true" class="newsletter-form">
+                <input type="hidden" name="form-name" value="shop-newsletter">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">DreamDrip</span>
+                <p>Luxury custom fashion for the modern dreamer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="customize.html">Customize</a>
+                <a href="shop.html">Shop Designs</a>
+                <a href="designs.html">My Designs</a>
+                <a href="measurements.html">Measurements</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="returns.html">Returns</a>
+                <a href="size-guide.html">Size Guide</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+  &copy; 2024 DreamDrip. All rights reserved. 
+  | Powered by <a href="https://hallunix.tech" target="_blank">Hallunix Tech Solutions</a>
+</p>
+
+            <p class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Shop designs data
+        const shopDesigns = [
+            {
+                id: 1,
+                name: "Midnight Rose Gown",
+                category: "evening",
+                price: 389.99,
+                originalPrice: 489.99,
+                color: "dark",
+                description: "Deep purple evening gown with rose gold accents",
+                features: ["Floor length", "Embroidered belt", "Sleeveless", "Gold pattern"],
+                imageStyle: "background: linear-gradient(135deg, #2B183F, #D4A373);",
+                badge: "Bestseller"
+            },
+            {
+                id: 2,
+                name: "Golden Hour Dress",
+                category: "cocktail",
+                price: 329.99,
+                color: "gold",
+                description: "Rose gold cocktail dress with cream accents",
+                features: ["Midi length", "Cap sleeves", "Gold belt", "Simple elegance"],
+                imageStyle: "background: linear-gradient(135deg, #D4A373, #FFF7F0);",
+                badge: "New"
+            },
+            {
+                id: 3,
+                name: "Starlight Evening Dress",
+                category: "evening",
+                price: 359.99,
+                originalPrice: 429.99,
+                color: "light",
+                description: "Cream evening dress with floral pattern",
+                features: ["Floor length", "Platinum belt", "Sleeveless", "Floral pattern"],
+                imageStyle: "background: linear-gradient(135deg, #FFF7F0, #2B183F);",
+                badge: "Popular"
+            },
+            {
+                id: 4,
+                name: "Lavender Dream Gown",
+                category: "bridal",
+                price: 419.99,
+                color: "purple",
+                description: "Lavender gown with gold shimmer pattern",
+                features: ["Floor length", "Full sleeves", "Gold belt", "Shimmer pattern"],
+                imageStyle: "background: linear-gradient(135deg, #9C89B8, #D4A373);",
+                badge: "Limited"
+            },
+            {
+                id: 5,
+                name: "Royal Velvet Dress",
+                category: "evening",
+                price: 449.99,
+                color: "dark",
+                description: "Deep velvet dress with platinum accents",
+                features: ["Floor length", "Platinum belt", "Cap sleeves", "Velvet texture"],
+                imageStyle: "background: linear-gradient(135deg, #1A0F28, #3D2B55);",
+                badge: "Luxury"
+            },
+            {
+                id: 6,
+                name: "Blush Silk Dress",
+                category: "day",
+                price: 299.99,
+                color: "light",
+                description: "Blush pink day dress with silk finish",
+                features: ["Midi length", "Sleeveless", "Rose gold belt", "Silk fabric"],
+                imageStyle: "background: linear-gradient(135deg, #F8C8DC, #D4A373);"
+            },
+            {
+                id: 7,
+                name: "Emerald Elegance Gown",
+                category: "evening",
+                price: 479.99,
+                color: "dark",
+                description: "Emerald green gown with gold embroidery",
+                features: ["Floor length", "Embroidered", "Sleeveless", "Gold details"],
+                imageStyle: "background: linear-gradient(135deg, #0B5345, #D4A373);",
+                badge: "New"
+            },
+            {
+                id: 8,
+                name: "Sunset Midi Dress",
+                category: "cocktail",
+                price: 349.99,
+                color: "gold",
+                description: "Sunset gradient dress with gold accents",
+                features: ["Midi length", "Sleeveless", "Gold belt", "Gradient design"],
+                imageStyle: "background: linear-gradient(135deg, #FF6B6B, #D4A373, #4ECDC4);"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+            loadShopDesigns();
+            
+            // Add filter event listeners
+            document.getElementById('category').addEventListener('change', filterDesigns);
+            document.getElementById('price').addEventListener('change', filterDesigns);
+            document.getElementById('color').addEventListener('change', filterDesigns);
+        });
+
+        function loadShopDesigns(filteredDesigns = shopDesigns) {
+            const shopGrid = document.getElementById('shop-grid');
+            const emptyState = document.getElementById('shop-empty');
+            
+            if (filteredDesigns.length === 0) {
+                shopGrid.innerHTML = '';
+                emptyState.style.display = 'flex';
+                return;
+            }
+            
+            emptyState.style.display = 'none';
+            shopGrid.innerHTML = '';
+            
+            filteredDesigns.forEach(design => {
+                const designCard = document.createElement('div');
+                designCard.className = 'design-card shop-card card-slide';
+                designCard.innerHTML = `
+                    <div class="design-image" style="${design.imageStyle}">
+                        ${design.badge ? `<span class="design-badge ${design.badge.toLowerCase()}">${design.badge}</span>` : ''}
+                    </div>
+                    <div class="design-info">
+                        <h3>${design.name}</h3>
+                        <p class="design-description">${design.description}</p>
+                        <div class="design-features">
+                            ${design.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                        </div>
+                        <div class="design-pricing">
+                            <span class="price">$${design.price.toFixed(2)}</span>
+                            ${design.originalPrice ? `<span class="original-price">$${design.originalPrice.toFixed(2)}</span>` : ''}
+                        </div>
+                        <div class="design-actions">
+                            <button class="btn-small" onclick="customizeDesign(${design.id})">
+                                <i class="fas fa-palette"></i> Customize
+                            </button>
+                            <button class="btn-small btn-primary" onclick="buyDesign(${design.id})">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                `;
+                shopGrid.appendChild(designCard);
+            });
+        }
+
+        function filterDesigns() {
+            const category = document.getElementById('category').value;
+            const price = document.getElementById('price').value;
+            const color = document.getElementById('color').value;
+            
+            let filtered = shopDesigns.filter(design => {
+                // Category filter
+                if (category !== 'all' && design.category !== category) return false;
+                
+                // Color filter
+                if (color !== 'all' && design.color !== color) return false;
+                
+                // Price filter
+                if (price !== 'all') {
+                    if (price === 'low' && design.price >= 300) return false;
+                    if (price === 'medium' && (design.price < 300 || design.price > 500)) return false;
+                    if (price === 'high' && design.price <= 500) return false;
+                }
+                
+                return true;
+            });
+            
+            loadShopDesigns(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('category').value = 'all';
+            document.getElementById('price').value = 'all';
+            document.getElementById('color').value = 'all';
+            loadShopDesigns(shopDesigns);
+        }
+
+        function customizeDesign(designId) {
+            const design = shopDesigns.find(d => d.id === designId);
+            if (design) {
+                // Map shop design to customization template
+                const template = {
+                    color: getColorFromDesign(design),
+                    pattern: getPatternFromDesign(design),
+                    sleeves: getSleevesFromDesign(design),
+                    length: getLengthFromDesign(design),
+                    belt: getBeltFromDesign(design),
+                    name: design.name,
+                    isTemplate: true,
+                    templateId: designId
+                };
+                
+                localStorage.setItem('dreamdrip_template', JSON.stringify(template));
+                window.location.href = 'customize.html';
+            }
+        }
+
+        function buyDesign(designId) {
+            const design = shopDesigns.find(d => d.id === designId);
+            if (design) {
+                customizeDesign(designId);
+                setTimeout(() => {
+                    window.location.href = 'checkout.html';
+                }, 500);
+            }
+        }
+
+        // Helper functions to extract design properties
+        function getColorFromDesign(design) {
+            if (design.color === 'dark') return '#2B183F';
+            if (design.color === 'light') return '#FFF7F0';
+            if (design.color === 'gold') return '#D4A373';
+            if (design.color === 'purple') return '#9C89B8';
+            return '#D4A373';
+        }
+
+        function getPatternFromDesign(design) {
+            if (design.name.includes('Floral') || design.name.includes('Starlight')) return 'floral';
+            if (design.name.includes('Shimmer') || design.name.includes('Lavender')) return 'gold';
+            if (design.name.includes('Embroidered') || design.name.includes('Royal')) return 'none';
+            return 'none';
+        }
+
+        function getSleevesFromDesign(design) {
+            if (design.features.some(f => f.includes('sleeveless'))) return 'sleeveless';
+            if (design.features.some(f => f.includes('cap'))) return 'cap';
+            if (design.features.some(f => f.includes('full'))) return 'full';
+            return 'sleeveless';
+        }
+
+        function getLengthFromDesign(design) {
+            if (design.features.some(f => f.includes('floor'))) return 'floor';
+            return 'midi';
+        }
+
+        function getBeltFromDesign(design) {
+            if (design.features.some(f => f.includes('platinum'))) return 'platinum';
+            if (design.features.some(f => f.includes('embroidered'))) return 'embroidered';
+            return 'gold';
+        }
+    </script>
+</body>
+</html>

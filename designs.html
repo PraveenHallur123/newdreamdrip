@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Designs | DreamDrip</title>
+    <link rel="icon" type="image/png" href="/assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">DreamDrip</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="customize.html" class="nav-link">Customize</a>
+                <a href="designs.html" class="nav-link active">My Designs</a>
+                <a href="measurements.html" class="nav-link">Measurements</a>
+                <button class="btn-cta" onclick="window.location.href='customize.html'">
+                    <i class="fas fa-plus"></i> New Design
+                </button>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Designs Gallery -->
+    <main class="designs-container">
+        <div class="designs-header">
+            <h1><i class="fas fa-star"></i> My Saved Designs</h1>
+            <p>All your creative designs in one place. Click on any design to apply it to the customizer.</p>
+        </div>
+        
+        <div class="designs-grid" id="designs-grid">
+            <!-- Designs will be loaded dynamically from localStorage -->
+            <div class="empty-state" id="empty-state">
+                <i class="fas fa-palette"></i>
+                <h3>No designs yet</h3>
+                <p>You haven't saved any designs yet. Create your first design!</p>
+                <button class="btn-primary" onclick="window.location.href='customize.html'">
+                    <i class="fas fa-magic"></i> Start Designing
+                </button>
+            </div>
+        </div>
+        
+        <div class="designs-actions">
+            <button class="btn-secondary" onclick="clearAllDesigns()">
+                <i class="fas fa-trash"></i> Clear All Designs
+            </button>
+            <button class="btn-primary" onclick="window.location.href='customize.html'">
+                <i class="fas fa-plus"></i> Create New Design
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">DreamDrip</span>
+                <p>Luxury custom fashion for the modern dreamer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="customize.html">Customize</a>
+                <a href="shop.html">Shop Designs</a>
+                <a href="designs.html">My Designs</a>
+                <a href="measurements.html">Measurements</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="returns.html">Returns</a>
+                <a href="size-guide.html">Size Guide</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+  &copy; 2024 DreamDrip. All rights reserved. 
+  | Powered by <a href="https://hallunix.tech" target="_blank">Hallunix Tech Solutions</a>
+</p>
+
+            <p class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Load and display saved designs
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+            loadAndDisplayDesigns();
+        });
+        
+        function loadAndDisplayDesigns() {
+            const designsGrid = document.getElementById('designs-grid');
+            const emptyState = document.getElementById('empty-state');
+            
+            // Load designs from localStorage
+            const savedDesigns = JSON.parse(localStorage.getItem('dreamdrip_designs') || '[]');
+            
+            if (savedDesigns.length === 0) {
+                emptyState.style.display = 'flex';
+                return;
+            }
+            
+            emptyState.style.display = 'none';
+            
+            // Clear existing content except empty state
+            designsGrid.innerHTML = '';
+            
+            // Add each design as a card
+            savedDesigns.forEach((design, index) => {
+                const designCard = document.createElement('div');
+                designCard.className = 'design-card card-slide';
+                designCard.innerHTML = `
+                    <div class="design-card-header">
+                        <h3>${design.name || 'Unnamed Design'}</h3>
+                        <span class="design-date">${design.date || 'Recently saved'}</span>
+                    </div>
+                    <div class="design-preview">
+                        <svg width="200" height="300" viewBox="0 0 300 500">
+                            <defs>
+                                <pattern id="card-pattern-${index}" patternUnits="userSpaceOnUse" width="20" height="20" 
+                                         patternTransform="rotate(${design.pattern === 'stripe' ? '45' : '0'})">
+                                    ${design.pattern === 'floral' ? '<path d="M5,5 Q7.5,2.5 10,5 T15,5" fill="${design.color}" opacity="0.6"/>' : ''}
+                                    ${design.pattern === 'dots' ? '<circle cx="10" cy="10" r="2" fill="${design.color}" opacity="0.6"/>' : ''}
+                                    ${design.pattern === 'stripe' ? '<rect x="0" y="0" width="5" height="20" fill="${design.color}" opacity="0.6"/>' : ''}
+                                    ${design.pattern === 'gold' ? '<circle cx="10" cy="10" r="3" fill="#FFD700" opacity="0.8"/>' : ''}
+                                </pattern>
+                            </defs>
+                            <!-- Dress body -->
+                            <path d="M150,100 C100,150 100,300 120,400 L180,400 C200,300 200,150 150,100 Z" 
+                                  fill="${design.color}" stroke="#FFF7F0" stroke-width="2"/>
+                            ${design.pattern !== 'none' ? 
+                              `<path d="M150,100 C100,150 100,300 120,400 L180,400 C200,300 200,150 150,100 Z" 
+                                    fill="url(#card-pattern-${index})" stroke="none"/>` : ''}
+                            <!-- Belt -->
+                            <rect x="${design.belt === 'embroidered' ? '125' : '130'}" y="250" 
+                                  width="${design.belt === 'embroidered' ? '50' : '40'}" height="15" rx="5" 
+                                  fill="${design.belt === 'gold' ? '#D4A373' : design.belt === 'platinum' ? '#E5E4E2' : '#8B5A2B'}" 
+                                  stroke="#FFF7F0" stroke-width="1"/>
+                            <!-- Sleeves -->
+                            ${design.sleeves === 'cap' ? 
+                              `<circle cx="100" cy="150" r="15" fill="${design.color}" stroke="#FFF7F0" stroke-width="1"/>
+                               <circle cx="200" cy="150" r="15" fill="${design.color}" stroke="#FFF7F0" stroke-width="1"/>` : ''}
+                            ${design.sleeves === 'full' ? 
+                              `<path d="M85,150 Q75,200 90,250 L110,250 Q95,200 100,150 Z" fill="${design.color}" stroke="#FFF7F0" stroke-width="1"/>
+                               <path d="M215,150 Q225,200 210,250 L190,250 Q205,200 200,150 Z" fill="${design.color}" stroke="#FFF7F0" stroke-width="1"/>` : ''}
+                        </svg>
+                    </div>
+                    <div class="design-card-footer">
+                        <button class="btn-small" onclick="applyDesign(${index})">
+                            <i class="fas fa-check"></i> Apply Design
+                        </button>
+                        <button class="btn-small btn-danger" onclick="deleteDesign(${index})">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                `;
+                designsGrid.appendChild(designCard);
+            });
+        }
+        
+        function applyDesign(index) {
+            const savedDesigns = JSON.parse(localStorage.getItem('dreamdrip_designs') || '[]');
+            if (savedDesigns[index]) {
+                // Save the design to be applied
+                localStorage.setItem('dreamdrip_apply_design', JSON.stringify(savedDesigns[index]));
+                // Redirect to customizer
+                window.location.href = 'customize.html';
+            }
+        }
+        
+        function deleteDesign(index) {
+            if (confirm('Are you sure you want to delete this design?')) {
+                const savedDesigns = JSON.parse(localStorage.getItem('dreamdrip_designs') || '[]');
+                savedDesigns.splice(index, 1);
+                localStorage.setItem('dreamdrip_designs', JSON.stringify(savedDesigns));
+                loadAndDisplayDesigns();
+            }
+        }
+        
+        function clearAllDesigns() {
+            if (confirm('Are you sure you want to delete ALL your designs? This cannot be undone.')) {
+                localStorage.removeItem('dreamdrip_designs');
+                loadAndDisplayDesigns();
+            }
+        }
+    </script>
+</body>
+</html>

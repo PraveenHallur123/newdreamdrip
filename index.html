@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamDrip | Luxury Custom Fashion</title>
+    <link rel="icon" type="image/png" href="/assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">DreamDrip</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="customize.html" class="nav-link">Customize</a>
+                <a href="designs.html" class="nav-link">My Designs</a>
+                <a href="shop.html" class="nav-link">Shop Designs</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="user-section">
+                    <div data-netlify-identity-menu></div>
+                </div>
+                <button class="btn-cta" onclick="window.location.href='customize.html'">Create Now</button>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title floating">Craft Your Perfect <span class="highlight">Dream Dress</span></h1>
+            <p class="hero-subtitle">Luxury custom fashion, tailored to your vision. Design, customize, and create the outfit of your dreams.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary btn-glow" onclick="window.location.href='customize.html'">
+                    <i class="fas fa-magic"></i> Start Designing
+                </button>
+                <button class="btn-secondary" onclick="window.location.href='shop.html'">
+                    <i class="fas fa-star"></i> Shop Designs
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="mannequin-preview">
+                <!-- SVG preview will be inserted by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Designs Section -->
+    <section class="section featured-designs">
+        <h2 class="section-title">Featured Designs</h2>
+        <p class="section-subtitle">Shop our most popular custom designs or use them as inspiration</p>
+        
+        <div class="designs-grid">
+            <div class="design-card card-slide">
+                <div class="design-image" style="background: linear-gradient(135deg, #2B183F, #D4A373);">
+                    <span class="design-badge">Bestseller</span>
+                </div>
+                <div class="design-info">
+                    <h3>Midnight Rose Gown</h3>
+                    <p class="design-description">Deep purple with rose gold accents, floor length with embroidered belt</p>
+                    <div class="design-pricing">
+                        <span class="price">$389.99</span>
+                        <span class="original-price">$489.99</span>
+                    </div>
+                    <div class="design-actions">
+                        <button class="btn-small" onclick="quickCustomize('midnight-rose')">
+                            <i class="fas fa-palette"></i> Customize
+                        </button>
+                        <button class="btn-small btn-primary" onclick="quickBuy('midnight-rose')">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="design-card card-slide">
+                <div class="design-image" style="background: linear-gradient(135deg, #D4A373, #FFF7F0);">
+                    <span class="design-badge new">New</span>
+                </div>
+                <div class="design-info">
+                    <h3>Golden Hour Dress</h3>
+                    <p class="design-description">Rose gold with cream accents, midi length with cap sleeves</p>
+                    <div class="design-pricing">
+                        <span class="price">$329.99</span>
+                    </div>
+                    <div class="design-actions">
+                        <button class="btn-small" onclick="quickCustomize('golden-hour')">
+                            <i class="fas fa-palette"></i> Customize
+                        </button>
+                        <button class="btn-small btn-primary" onclick="quickBuy('golden-hour')">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="design-card card-slide">
+                <div class="design-image" style="background: linear-gradient(135deg, #FFF7F0, #2B183F);">
+                    <span class="design-badge popular">Popular</span>
+                </div>
+                <div class="design-info">
+                    <h3>Starlight Evening Dress</h3>
+                    <p class="design-description">Cream with deep purple floral pattern, sleeveless with platinum belt</p>
+                    <div class="design-pricing">
+                        <span class="price">$359.99</span>
+                        <span class="original-price">$429.99</span>
+                    </div>
+                    <div class="design-actions">
+                        <button class="btn-small" onclick="quickCustomize('starlight')">
+                            <i class="fas fa-palette"></i> Customize
+                        </button>
+                        <button class="btn-small btn-primary" onclick="quickBuy('starlight')">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="design-card card-slide">
+                <div class="design-image" style="background: linear-gradient(135deg, #9C89B8, #D4A373);">
+                    <span class="design-badge">Limited</span>
+                </div>
+                <div class="design-info">
+                    <h3>Lavender Dream Gown</h3>
+                    <p class="design-description">Lavender with gold shimmer pattern, floor length with full sleeves</p>
+                    <div class="design-pricing">
+                        <span class="price">$419.99</span>
+                    </div>
+                    <div class="design-actions">
+                        <button class="btn-small" onclick="quickCustomize('lavender-dream')">
+                            <i class="fas fa-palette"></i> Customize
+                        </button>
+                        <button class="btn-small btn-primary" onclick="quickBuy('lavender-dream')">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-all">
+            <button class="btn-secondary" onclick="window.location.href='shop.html'">
+                <i class="fas fa-store"></i> View All Designs
+            </button>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works">
+        <h2 class="section-title">How DreamDrip Works</h2>
+        <div class="steps-container">
+            <div class="step card-slide">
+                <div class="step-icon">1</div>
+                <h3>Design</h3>
+                <p>Use our interactive customizer to design your perfect outfit</p>
+            </div>
+            <div class="step card-slide">
+                <div class="step-icon">2</div>
+                <h3>Customize</h3>
+                <p>Choose fabrics, colors, patterns, and details</p>
+            </div>
+            <div class="step card-slide">
+                <div class="step-icon">3</div>
+                <h3>Perfect Fit</h3>
+                <p>Enter your measurements for a custom-tailored fit</p>
+            </div>
+            <div class="step card-slide">
+                <div class="step-icon">4</div>
+                <h3>Receive</h3>
+                <p>Get your handcrafted DreamDrip creation delivered</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section newsletter">
+        <div class="newsletter-container">
+            <h2>Stay in the Loop</h2>
+            <p>Subscribe to get exclusive design previews, style tips, and special offers</p>
+            
+            <form name="newsletter" method="POST" data-netlify="true" class="newsletter-form">
+                <input type="hidden" name="form-name" value="newsletter">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Subscribe
+                    </button>
+                </div>
+                <p class="form-note">By subscribing, you agree to our Privacy Policy</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">DreamDrip</span>
+                <p>Luxury custom fashion for the modern dreamer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="customize.html">Customize</a>
+                <a href="shop.html">Shop Designs</a>
+                <a href="designs.html">My Designs</a>
+                <a href="measurements.html">Measurements</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="returns.html">Returns</a>
+                <a href="size-guide.html">Size Guide</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DreamDrip. All rights reserved. | Powered by <a href="https://hallunix.tech" target="_blank">Hallunix Tech Solutions</a>
+</p>
+
+            <p class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+            createHomepagePreview();
+            
+            // Initialize Netlify Identity
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        });
+        
+        function quickCustomize(designId) {
+            // Save design template to localStorage
+            const designTemplates = {
+                'midnight-rose': {
+                    color: '#2B183F',
+                    pattern: 'gold',
+                    sleeves: 'sleeveless',
+                    length: 'floor',
+                    belt: 'embroidered',
+                    name: 'Midnight Rose Gown'
+                },
+                'golden-hour': {
+                    color: '#D4A373',
+                    pattern: 'none',
+                    sleeves: 'cap',
+                    length: 'midi',
+                    belt: 'gold',
+                    name: 'Golden Hour Dress'
+                },
+                'starlight': {
+                    color: '#FFF7F0',
+                    pattern: 'floral',
+                    sleeves: 'sleeveless',
+                    length: 'floor',
+                    belt: 'platinum',
+                    name: 'Starlight Evening Dress'
+                },
+                'lavender-dream': {
+                    color: '#9C89B8',
+                    pattern: 'gold',
+                    sleeves: 'full',
+                    length: 'floor',
+                    belt: 'gold',
+                    name: 'Lavender Dream Gown'
+                }
+            };
+            
+            if (designTemplates[designId]) {
+                localStorage.setItem('dreamdrip_template', JSON.stringify(designTemplates[designId]));
+                window.location.href = 'customize.html';
+            }
+        }
+        
+        function quickBuy(designId) {
+            quickCustomize(designId);
+            setTimeout(() => {
+                window.location.href = 'checkout.html';
+            }, 500);
+        }
+        
+        function createHomepagePreview() {
+            const previewContainer = document.querySelector('.mannequin-preview');
+            if (previewContainer) {
+                previewContainer.innerHTML = `
+                    <svg width="300" height="500" viewBox="0 0 300 500">
+                        <defs>
+                            <linearGradient id="previewGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#D4A373;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2B183F;stop-opacity:0.8" />
+                            </linearGradient>
+                            <pattern id="previewPattern" patternUnits="userSpaceOnUse" width="20" height="20">
+                                <path d="M0,10 L10,0 L20,10 L10,20 Z" fill="#FFF7F0" opacity="0.3"/>
+                            </pattern>
+                        </defs>
+                        <!-- Dress body -->
+                        <path id="preview-dress" d="M150,100 C100,150 100,300 120,400 L180,400 C200,300 200,150 150,100 Z" 
+                              fill="url(#previewGradient)" stroke="#FFF7F0" stroke-width="2"/>
+                        <path id="preview-dress-pattern" d="M150,100 C100,150 100,300 120,400 L180,400 C200,300 200,150 150,100 Z" 
+                              fill="url(#previewPattern)" stroke="none"/>
+                        <!-- Belt -->
+                        <rect id="preview-belt" x="130" y="250" width="40" height="15" rx="5" fill="#D4A373" stroke="#FFF7F0" stroke-width="1"/>
+                    </svg>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

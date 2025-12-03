@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | DreamDrip</title>
+    <link rel="icon" type="image/png" href="/assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">DreamDrip</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="customize.html" class="nav-link">Customize</a>
+                <a href="shop.html" class="nav-link">Shop Designs</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <div class="contact-header">
+        <div class="contact-header-content">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Reach out for custom design inquiries, support, or collaborations.</p>
+        </div>
+    </div>
+
+    <!-- Contact Content -->
+    <main class="contact-container">
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2><i class="fas fa-envelope"></i> Send us a Message</h2>
+                
+                <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="custom-design">Custom Design Inquiry</option>
+                            <option value="order-support">Order Support</option>
+                            <option value="measurements">Measurement Help</option>
+                            <option value="collaboration">Collaboration Request</option>
+                            <option value="feedback">Feedback & Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="order-number">Order Number (if applicable)</label>
+                        <input type="text" id="order-number" name="order-number" placeholder="DD-123456">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your inquiry..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attachment">Add Files (optional)</label>
+                        <input type="file" id="attachment" name="attachment" multiple>
+                        <small class="file-note">Upload images or documents related to your inquiry (Max 10MB total)</small>
+                    </div>
+                    
+                    <div data-netlify-recaptcha></div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe" checked>
+                        <label for="subscribe">Subscribe to our newsletter for updates and offers</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="reset" class="btn-secondary">
+                            <i class="fas fa-redo"></i> Clear Form
+                        </button>
+                        <button type="submit" class="btn-primary btn-glow">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="contact-info-section">
+                <h2><i class="fas fa-info-circle"></i> Contact Information</h2>
+                
+                <div class="contact-info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Customer Support</h3>
+                        <p>Available Monday-Friday, 9AM-6PM EST</p>
+                        <a href="mailto:support@dreamdrip.com">support@dreamdrip.com</a>
+                        <a href="tel:+1555123DREAM">(555) 123-DREAM</a>
+                    </div>
+                    
+                    <!-- <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Design Consultations</h3>
+                        <p>Schedule a 1:1 consultation with our designers</p>
+                        <a href="mailto:design@dreamdrip.com">design@dreamdrip.com</a>
+                        <a href="book-consultation.html" class="btn-small">Book Now</a>
+                    </div> -->
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Our Studio</h3>
+                        <p>Visit our design studio by appointment</p>
+                        <address>
+                            123 Fashion Avenue<br>
+                            Suite 456<br>
+                            New York, NY 10001
+                        </address>
+                    </div>
+                    
+                    <!-- <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Response Time</h3>
+                        <p>We aim to respond within 24 hours during business days</p>
+                        <p class="response-note">Urgent order issues: 2-4 hours</p>
+                    </div> -->
+                </div>
+                
+                <!-- FAQ Preview -->
+                <!-- <div class="faq-preview">
+                    <h3><i class="fas fa-question-circle"></i> Quick Answers</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <h4>How do I change my measurements after ordering?</h4>
+                            <p>Contact us within 24 hours of ordering. After that, changes may incur additional fees.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>What's your return policy for custom designs?</h4>
+                            <p>Custom designs are final sale, but we offer free alterations within 30 days of delivery.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Can I rush my order?</h4>
+                            <p>Yes! Rush production is available for an additional fee. Contact us for options.</p>
+                        </div>
+                    </div>
+                    <a href="faq.html" class="btn-secondary">
+                        <i class="fas fa-book"></i> View Full FAQ
+                    </a>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Message Sent!</h2>
+            <p>Thank you for contacting DreamDrip. We'll get back to you within 24 hours.</p>
+            <button class="btn-primary" onclick="closeSuccessModal()">
+                <i class="fas fa-check"></i> Continue Browsing
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">DreamDrip</span>
+                <p>Luxury custom fashion for the modern dreamer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="customize.html">Customize</a>
+                <a href="shop.html">Shop Designs</a>
+                <a href="designs.html">My Designs</a>
+                <a href="measurements.html">Measurements</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="returns.html">Returns</a>
+                <a href="size-guide.html">Size Guide</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+  &copy; 2024 DreamDrip. All rights reserved. 
+  | Powered by <a href="https://hallunix.tech" target="_blank">Hallunix Tech Solutions</a>
+</p>
+
+            <p class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+            
+            // Handle form submission
+            const contactForm = document.querySelector('.contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // In a real Netlify deployment, this would be handled automatically
+                    // For demo purposes, we'll show success message
+                    e.preventDefault();
+                    
+                    // Show success modal
+                    document.getElementById('success-modal').style.display = 'flex';
+                    
+                    // Reset form after a delay
+                    setTimeout(() => {
+                        contactForm.reset();
+                    }, 1000);
+                });
+            }
+        });
+        
+        function closeSuccessModal() {
+            document.getElementById('success-modal').style.display = 'none';
+        }
+        
+        // Handle Netlify form submission
+        if (window.location.search.includes('success=true')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('success-modal').style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements | DreamDrip</title>
+    <link rel="icon" type="image/png" href="/assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">DreamDrip</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="customize.html" class="nav-link">Customize</a>
+                <a href="designs.html" class="nav-link">My Designs</a>
+                <a href="measurements.html" class="nav-link active">Measurements</a>
+                <button class="btn-cta" onclick="saveMeasurements()">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Measurements Form -->
+    <main class="measurements-container">
+        <div class="measurements-header">
+            <h1><i class="fas fa-ruler-combined"></i> Your Measurements</h1>
+            <p>Enter your measurements for a perfect custom fit. All measurements are stored locally on your device.</p>
+        </div>
+        
+        <div class="measurements-content">
+            <div class="measurements-form">
+                <div class="form-group">
+                    <label for="height"><i class="fas fa-arrows-alt-v"></i> Height (cm)</label>
+                    <input type="number" id="height" min="100" max="250" placeholder="Enter your height in cm">
+                    <div class="measurement-help">Typical range: 150-190 cm</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="shoulder"><i class="fas fa-arrows-alt-h"></i> Shoulder Width (cm)</label>
+                    <input type="number" id="shoulder" min="30" max="60" placeholder="Shoulder width">
+                    <div class="measurement-help">Measure across the back from shoulder edge to shoulder edge</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bust"><i class="fas fa-circle"></i> Bust (cm)</label>
+                    <input type="number" id="bust" min="70" max="150" placeholder="Bust measurement">
+                    <div class="measurement-help">Measure around the fullest part of your bust</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="waist"><i class="fas fa-minus"></i> Waist (cm)</label>
+                    <input type="number" id="waist" min="50" max="120" placeholder="Waist measurement">
+                    <div class="measurement-help">Measure around the narrowest part of your waist</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hip"><i class="fas fa-arrows-alt"></i> Hip (cm)</label>
+                    <input type="number" id="hip" min="80" max="150" placeholder="Hip measurement">
+                    <div class="measurement-help">Measure around the fullest part of your hips</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sleeve"><i class="fas fa-arrows-alt-h"></i> Sleeve Length (cm)</label>
+                    <input type="number" id="sleeve" min="20" max="100" placeholder="Sleeve length">
+                    <div class="measurement-help">Measure from shoulder to wrist</div>
+                </div>
+                
+                <div class="form-actions">
+                    <button class="btn-secondary" onclick="resetMeasurements()">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                    <button class="btn-primary btn-glow" onclick="saveMeasurements()">
+                        <i class="fas fa-check-circle"></i> Save Measurements
+                    </button>
+                </div>
+            </div>
+            
+            <div class="measurements-guide">
+                <h3><i class="fas fa-info-circle"></i> Measurement Guide</h3>
+                <div class="guide-item">
+                    <h4>How to Measure</h4>
+                    <p>Use a soft measuring tape. Stand naturally with arms at your sides. Wear form-fitting clothing for accuracy.</p>
+                </div>
+                <div class="guide-item">
+                    <h4>Height</h4>
+                    <p>Stand straight against a wall without shoes. Mark the top of your head and measure from floor to mark.</p>
+                </div>
+                <div class="guide-item">
+                    <h4>Bust/Waist/Hip</h4>
+                    <p>Keep tape parallel to floor. Don't pull too tight - tape should be snug but not compressing.</p>
+                </div>
+                <div class="guide-item">
+                    <h4>Perfect Fit Guarantee</h4>
+                    <p>DreamDrip uses your measurements to create patterns specifically for your body. We guarantee a perfect fit or free alterations.</p>
+                </div>
+                
+                <div class="saved-measurements" id="saved-measurements">
+                    <!-- Saved measurements will appear here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">DreamDrip</span>
+                <p>Luxury custom fashion for the modern dreamer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="customize.html">Customize</a>
+                <a href="shop.html">Shop Designs</a>
+                <a href="designs.html">My Designs</a>
+                <a href="measurements.html">Measurements</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="returns.html">Returns</a>
+                <a href="size-guide.html">Size Guide</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+  &copy; 2024 DreamDrip. All rights reserved. 
+  | Powered by <a href="https://hallunix.tech" target="_blank">Hallunix Tech Solutions</a>
+</p>
+
+            <p class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Load saved measurements on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+            loadSavedMeasurements();
+        });
+        
+        function loadSavedMeasurements() {
+            const saved = JSON.parse(localStorage.getItem('dreamdrip_measurements') || '{}');
+            
+            // Populate form fields
+            document.getElementById('height').value = saved.height || '';
+            document.getElementById('shoulder').value = saved.shoulder || '';
+            document.getElementById('bust').value = saved.bust || '';
+            document.getElementById('waist').value = saved.waist || '';
+            document.getElementById('hip').value = saved.hip || '';
+            document.getElementById('sleeve').value = saved.sleeve || '';
+            
+            // Display saved measurements
+            displaySavedMeasurements(saved);
+        }
+        
+        function displaySavedMeasurements(measurements) {
+            const container = document.getElementById('saved-measurements');
+            if (!container) return;
+            
+            if (Object.keys(measurements).length === 0) {
+                container.innerHTML = `
+                    <div class="empty-measurements">
+                        <i class="fas fa-ruler"></i>
+                        <p>No measurements saved yet</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '<h4><i class="fas fa-history"></i> Last Saved Measurements</h4><ul>';
+            
+            if (measurements.height) html += `<li><strong>Height:</strong> ${measurements.height} cm</li>`;
+            if (measurements.shoulder) html += `<li><strong>Shoulder:</strong> ${measurements.shoulder} cm</li>`;
+            if (measurements.bust) html += `<li><strong>Bust:</strong> ${measurements.bust} cm</li>`;
+            if (measurements.waist) html += `<li><strong>Waist:</strong> ${measurements.waist} cm</li>`;
+            if (measurements.hip) html += `<li><strong>Hip:</strong> ${measurements.hip} cm</li>`;
+            if (measurements.sleeve) html += `<li><strong>Sleeve:</strong> ${measurements.sleeve} cm</li>`;
+            
+            html += '</ul>';
+            container.innerHTML = html;
+        }
+        
+        function saveMeasurements() {
+            const measurements = {
+                height: document.getElementById('height').value,
+                shoulder: document.getElementById('shoulder').value,
+                bust: document.getElementById('bust').value,
+                waist: document.getElementById('waist').value,
+                hip: document.getElementById('hip').value,
+                sleeve: document.getElementById('sleeve').value,
+                lastUpdated: new Date().toLocaleDateString()
+            };
+            
+            // Basic validation
+            let isValid = true;
+            const inputs = document.querySelectorAll('.measurements-form input');
+            inputs.forEach(input => {
+                if (input.value && (parseInt(input.value) < parseInt(input.min) || parseInt(input.value) > parseInt(input.max))) {
+                    input.style.borderColor = 'red';
+                    isValid = false;
+                } else if (input.value) {
+                    input.style.borderColor = '';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please enter valid measurements within the suggested ranges.');
+                return;
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('dreamdrip_measurements', JSON.stringify(measurements));
+            
+            // Update display
+            displaySavedMeasurements(measurements);
+            
+            // Show success message
+            alert('Measurements saved successfully! Your custom patterns will now use these measurements.');
+        }
+        
+        function resetMeasurements() {
+            if (confirm('Clear all measurement fields?')) {
+                const inputs = document.querySelectorAll('.measurements-form input');
+                inputs.forEach(input => {
+                    input.value = '';
+                    input.style.borderColor = '';
+                });
+                document.getElementById('saved-measurements').innerHTML = '';
+            }
+        }
+    </script>
+</body>
+</html>

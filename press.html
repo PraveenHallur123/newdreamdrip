@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press | DreamDrip Media & News</title>
+    <link rel="icon" type="image/png" href="/assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">DreamDrip</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="customize.html" class="nav-link">Customize</a>
+                <a href="shop.html" class="nav-link">Shop Designs</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="press.html" class="nav-link active">Press</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Press Header -->
+    <div class="press-header">
+        <div class="press-header-content">
+            <h1>Press & Media</h1>
+            <p>News, features, and media resources about DreamDrip</p>
+        </div>
+    </div>
+
+    <!-- Press Content -->
+    <main class="press-container">
+        <!-- Press Kit -->
+        <section class="press-section press-kit">
+            <h2><i class="fas fa-download"></i> Press Kit</h2>
+            
+            <div class="kit-content">
+                <div class="kit-downloads">
+                    <h3>Download Resources</h3>
+                    
+                    <div class="download-cards">
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="download-info">
+                                <h4>Brand Assets</h4>
+                                <p>Logos, color palette, typography guidelines</p>
+                                <a href="#" class="btn-small">
+                                    <i class="fas fa-download"></i> Download ZIP
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="download-info">
+                                <h4>Product Photos</h4>
+                                <p>High-resolution images of our designs</p>
+                                <a href="#" class="btn-small">
+                                    <i class="fas fa-download"></i> Download ZIP
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="download-info">
+                                <h4>Executive Photos & Bios</h4>
+                                <p>Professional photos and biographies</p>
+                                <a href="#" class="btn-small">
+                                    <i class="fas fa-download"></i> Download ZIP
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="download-info">
+                                <h4>Company Fact Sheet</h4>
+                                <p>Key facts, milestones, and statistics</p>
+                                <a href="#" class="btn-small">
+                                    <i class="fas fa-download"></i> Download PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="kit-request">
+                    <h3>Press Inquiries</h3>
+                    <p>For interview requests, additional materials, or specific questions:</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:press@dreamdrip.com">press@dreamdrip.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+1555123DREAM">(555) 123-DREAM ext. 5</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <h4>Press Contact</h4>
+                                <p>Jessica Lee, Head of Communications</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="request-form">
+                        <h4>Quick Inquiry Form</h4>
+                        <form id="pressInquiry">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Media Outlet" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Brief description of your inquiry..." rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News -->
+        <section class="press-section news">
+            <h2><i class="fas fa-newspaper"></i> Latest News</h2>
+            
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <span class="news-category">Award</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">November 15, 2024</span>
+                            <span class="news-source">Fashion Tech Awards</span>
+                        </div>
+                        <h3>DreamDrip Wins 2024 Fashion Tech Innovation Award</h3>
+                        <p class="news-excerpt">Recognized for revolutionizing custom fashion through technology and sustainability. The award celebrates our innovative approach to personalized luxury fashion.</p>
+                        <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="news-category">Business</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">October 28, 2024</span>
+                            <span class="news-source">Business Insider</span>
+                        </div>
+                        <h3>DreamDrip Secures $25M Series B Funding</h3>
+                        <p class="news-excerpt">Funding round led by TechGrowth Ventures to expand international operations and develop AI-powered customization features.</p>
+                        <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <span class="news-category">Sustainability</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">September 12, 2024</span>
+                            <span class="news-source">Vogue Business</span>
+                        </div>
+                        <h3>How DreamDrip is Redefining Sustainable Luxury</h3>
+                        <p class="news-excerpt">Feature on our zero-waste production methods and commitment to ethical fashion practices in the digital age.</p>
+                        <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <span class="news-category">Media</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">August 5, 2024</span>
+                            <span class="news-source">Forbes</span>
+                        </div>
+                        <h3>Founders Featured in Forbes 30 Under 30</h3>
+                        <p class="news-excerpt">Co-founders Isabella Rose and Marcus Chen recognized for innovation in fashion technology and e-commerce.</p>
+                        <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="news-archive">
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-archive"></i> View News Archive
+                </a>
+            </div>
+        </section>
+
+        <!-- Media Coverage -->
+        <section class="press-section coverage">
+            <h2><i class="fas fa-bullhorn"></i> Media Coverage</h2>
+            
+            <div class="coverage-logos">
+                <div class="logo-grid">
+                    <div class="logo-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Vogue</span>
+                    </div>
+                    <div class="logo-item">
+                        <i class="fas fa-tv"></i>
+                        <span>Forbes</span>
+                    </div>
+                    <div class="logo-item">
+                        <i class="fas fa-microphone"></i>
+                        <span>Business Insider</span>
+                    </div>
+                    <div class="logo-item">
+                        <i class="fas fa-globe"></i>
+                        <span>TechCrunch</span>
+                    </div>
+                    <div class="logo-item">
+                        <i class="fas fa-camera"></i>
+                        <span>Harper's Bazaar</span>
+                    </div>
+                    <div class="logo-item">
+                        <i class="fas fa-video"></i>
+                        <span>Bloomberg</span>
+                    </div>
+                    <div class="logo-item">
+                        <i class="fas fa-podcast"></i>
+                        <span>Fast Company</span>
+                    </div>
+                    <div class="logo-item">
+                        <i class="fas fa-rss"></i>
+                        <span>The New York Times</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coverage-highlights">
+                <h3>Featured Coverage</h3>
+                
+                <div class="highlight-slider">
+                    <div class="highlight-card active">
+                        <div class="highlight-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"DreamDrip represents the future of fashion: personalized, sustainable, and technologically advanced."</p>
+                        </div>
+                        <div class="highlight-source">
+                            <strong>Fashion Forward Magazine</strong>
+                            <span>October 2024 Cover Story</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"The most innovative fashion tech startup of the year, seamlessly blending couture craftsmanship with digital innovation."</p>
+                        </div>
+                        <div class="highlight-source">
+                            <strong>TechStyle Weekly</strong>
+                            <span>September 2024 Feature</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"DreamDrip's customizer platform sets a new standard for online fashion personalization and user experience."</p>
+                        </div>
+                        <div class="highlight-source">
+                            <strong>Digital Commerce Today</strong>
+                            <span>August 2024 Review</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" onclick="prevHighlight()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="slider-btn" onclick="nextHighlight()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Press Releases -->
+        <section class="press-section releases">
+            <h2><i class="fas fa-bullhorn"></i> Press Releases</h2>
+            
+            <div class="releases-list">
+                <div class="release-item">
+                    <div class="release-date">
+                        <span class="release-day">15</span>
+                        <span class="release-month">Nov</span>
+                        <span class="release-year">2024</span>
+                    </div>
+                    <div class="release-content">
+                        <h3>DreamDrip Announces Expansion to European Market</h3>
+                        <p class="release-excerpt">New fulfillment centers in London and Paris to serve European customers with faster shipping and localized support.</p>
+                        <div class="release-actions">
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-external-link-alt"></i> Read Online
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="release-item">
+                    <div class="release-date">
+                        <span class="release-day">28</span>
+                        <span class="release-month">Oct</span>
+                        <span class="release-year">2024</span>
+                    </div>
+                    <div class="release-content">
+                        <h3>New AI-Powered Design Assistant Launch</h3>
+                        <p class="release-excerpt">Introducing DREAMi, our AI design assistant that helps customers create perfect custom designs through natural language.</p>
+                        <div class="release-actions">
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-external-link-alt"></i> Read Online
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="release-item">
+                    <div class="release-date">
+                        <span class="release-day">10</span>
+                        <span class="release-month">Sep</span>
+                        <span class="release-year">2024</span>
+                    </div>
+                    <div class="release-content">
+                        <h3>Sustainability Report 2024 Released</h3>
+                        <p class="release-excerpt">Annual report details progress on environmental goals and new initiatives for carbon-neutral operations.</p>
+                        <div class="release-actions">
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-external-link-alt"></i> Read Online
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="release-item">
+                    <div class="release-date">
+                        <span class="release-day">22</span>
+                        <span class="release-month">Aug</span>
+                        <span class="release-year">2024</span>
+                    </div>
+                    <div class="release-content">
+                        <h3>Partnership with Fashion Design Schools Announced</h3>
+                        <p class="release-excerpt">New educational partnerships to nurture next-generation fashion talent through internships and curriculum development.</p>
+                        <div class="release-actions">
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <a href="#" class="btn-small">
+                                <i class="fas fa-external-link-alt"></i> Read Online
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="releases-archive">
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-history"></i> View All Press Releases
+                </a>
+            </div>
+        </section>
+
+        <!-- Events -->
+        <section class="press-section events">
+            <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">JAN</span>
+                        <span class="event-day">15-18</span>
+                        <span class="event-year">2025</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Paris Fashion Week</h3>
+                        <p class="event-location">Paris, France</p>
+                        <p class="event-description">Showcasing our latest custom collection and technology demonstrations.</p>
+                        <div class="event-status">
+                            <span class="status-badge upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">FEB</span>
+                        <span class="event-day">10-12</span>
+                        <span class="event-year">2025</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>TechStyle Conference</h3>
+                        <p class="event-location">San Francisco, CA</p>
+                        <p class="event-description">Keynote presentation: "The Future of Personalized Fashion Tech" by CEO Marcus Chen.</p>
+                        <div class="event-status">
+                            <span class="status-badge upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">MAR</span>
+                        <span class="event-day">5-7</span>
+                        <span class="event-year">2025</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Sustainable Fashion Summit</h3>
+                        <p class="event-location">London, UK</p>
+                        <p class="event-description">Panel discussion on technology's role in sustainable fashion practices.</p>
+                        <div class="event-status">
+                            <span class="status-badge upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">DEC</span>
+                        <span class="event-day">10</span>
+                        <span class="event-year">2024</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Fashion Tech Awards Ceremony</h3>
+                        <p class="event-location">New York, NY</p>
+                        <p class="event-description">Accepting the 2024 Fashion Tech Innovation Award.</p>
+                        <div class="event-status">
+                            <span class="status-badge past">Past Event</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Contact -->
+        <section class="press-section media-contact">
+            <h2><i class="fas fa-address-card"></i> Media Contact</h2>
+            
+            <div class="contact-card">
+                <div class="contact-photo">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Jessica Lee</h3>
+                    <p class="contact-title">Head of Communications</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:jessica.lee@dreamdrip.com">jessica.lee@dreamdrip.com</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+1555123DREAM">(555) 123-DREAM ext. 5</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>(555) 987-6543 (Mobile)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-bio">
+                        <p>Jessica leads all communications and media relations for DreamDrip. With 10+ years in fashion PR, she specializes in tech innovation stories and executive profiling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section class="press-section social-media">
+            <h2><i class="fas fa-hashtag"></i> Social Media</h2>
+            
+            <div class="social-grid">
+                <div class="social-channel">
+                    <div class="channel-header">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Instagram</h3>
+                    </div>
+                    <p>Behind-the-scenes, design inspiration, and customer features</p>
+                    <a href="#" class="btn-small">
+                        <i class="fas fa-external-link-alt"></i> Follow @dreamdrip
+                    </a>
+                </div>
+                
+                <div class="social-channel">
+                    <div class="channel-header">
+                        <i class="fab fa-twitter"></i>
+                        <h3>Twitter/X</h3>
+                    </div>
+                    <p>Company news, industry insights, and live event coverage</p>
+                    <a href="#" class="btn-small">
+                        <i class="fas fa-external-link-alt"></i> Follow @dreamdrip
+                    </a>
+                </div>
+                
+                <div class="social-channel">
+                    <div class="channel-header">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                    </div>
+                    <p>Business updates, career opportunities, and industry analysis</p>
+                    <a href="#" class="btn-small">
+                        <i class="fas fa-external-link-alt"></i> Follow DreamDrip
+                    </a>
+                </div>
+                
+                <div class="social-channel">
+                    <div class="channel-header">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube</h3>
+                    </div>
+                    <p>Design tutorials, factory tours, and founder interviews</p>
+                    <a href="#" class="btn-small">
+                        <i class="fas fa-external-link-alt"></i> Subscribe
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">DreamDrip</span>
+                <p>Luxury custom fashion for the modern dreamer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="customize.html">Customize</a>
+                <a href="shop.html">Shop Designs</a>
+                <a href="designs.html">My Designs</a>
+                <a href="measurements.html">Measurements</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="careers.html">Careers</a>
+                <a href="press.html">Press</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="returns.html">Returns</a>
+                <a href="size-guide.html">Size Guide</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="accessibility.html">Accessibility</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+  &copy; 2024 DreamDrip. All rights reserved. 
+  | Powered by <a href="https://hallunix.tech" target="_blank">Hallunix Tech Solutions</a>
+</p>
+
+            <p class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+            
+            // Initialize highlight slider
+            initHighlightSlider();
+            
+            // Press inquiry form
+            document.getElementById('pressInquiry').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your inquiry! Our press team will contact you shortly.');
+                this.reset();
+            });
+        });
+        
+        // Highlight Slider
+        let currentHighlight = 0;
+        const highlights = document.querySelectorAll('.highlight-card');
+        const highlightDots = document.querySelectorAll('.coverage .dot');
+        
+        function initHighlightSlider() {
+            showHighlight(currentHighlight);
+            
+            // Auto-rotate highlights
+            setInterval(() => {
+                nextHighlight();
+            }, 6000);
+        }
+        
+        function showHighlight(index) {
+            highlights.forEach(highlight => highlight.classList.remove('active'));
+            highlightDots.forEach(dot => dot.classList.remove('active'));
+            
+            highlights[index].classList.add('active');
+            highlightDots[index].classList.add('active');
+            currentHighlight = index;
+        }
+        
+        function nextHighlight() {
+            currentHighlight = (currentHighlight + 1) % highlights.length;
+            showHighlight(currentHighlight);
+        }
+        
+        function prevHighlight() {
+            currentHighlight = (currentHighlight - 1 + highlights.length) % highlights.length;
+            showHighlight(currentHighlight);
+        }
+        
+        // Dot click events for highlight slider
+        highlightDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showHighlight(index);
+            });
+        });
+    </script>
+</body>
+</html>
